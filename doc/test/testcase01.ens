@@ -1,0 +1,19 @@
+; Quadruple - [INIT 2, L_UNO, null]
+BR /2
+ORG 2
+
+ORG 2
+MOVE #64998, .SP
+MOVE #65001, .R0
+MOVE #64999, [.R0]
+MOVE #64999, .IX
+MOVE .SP, .R8
+MOVE .IX, .R9
+BR /L_UNO
+
+; Quadruple - [INL L_UNO, 0, null]
+L_UNO: 
+
+; Quadruple - [HALT null, null, null]
+HALT
+
